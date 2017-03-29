@@ -22,14 +22,6 @@
  */
 package org.openscience.cdk.fingerprint;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.List;
-import java.util.Map;
-
 import org.openscience.cdk.CDKConstants;
 import org.openscience.cdk.exception.CDKException;
 import org.openscience.cdk.graph.ConnectedComponents;
@@ -45,6 +37,14 @@ import org.openscience.cdk.ringsearch.AllRingsFinder;
 import org.openscience.cdk.smiles.smarts.parser.SMARTSParser;
 import org.openscience.cdk.tools.ILoggingTool;
 import org.openscience.cdk.tools.LoggingToolFactory;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.BitSet;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This fingerprinter generates 166 bit MACCS keys.
@@ -73,7 +73,7 @@ import org.openscience.cdk.tools.LoggingToolFactory;
  * @cdk.module  fingerprint
  * @cdk.githash
  */
-public class MACCSFingerprinter implements IFingerprinter {
+public class MACCSFingerprinter extends AbstractFingerprinter implements IFingerprinter {
 
     private static ILoggingTool logger          = LoggingToolFactory.createLoggingTool(MACCSFingerprinter.class);
 
